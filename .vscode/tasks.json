@@ -6,7 +6,7 @@
             "command": "gcc",
             "args": [
                 "-g", "-O0", "-W", "-Wall",
-                "./Before_Chapter3/bubble_sort.cpp", 
+                "./bin/test.cpp", 
                 "-o", 
                 "./bin/run.out"
             ],

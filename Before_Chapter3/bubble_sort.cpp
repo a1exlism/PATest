@@ -5,7 +5,7 @@
 int main() {
     int nums[7] = {2, 5, 6, 1, 19, 9, 7};
     int length = 7;
-    int max_length = 0;    //  每次比较之后少一次
+    int max_length = 7;    //  每次比较之后少一次
     int max_num = 0;
 
     for(int i = 0; i < length; i++) {
@@ -29,9 +29,3 @@ int main() {
     }
     return 0;
 }
-
-// void swap(int *a, int *b) { //  指针声明
-//     int tmp = *a;
-//     *a = *b;
-//     *b = tmp;
-// }

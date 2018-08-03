@@ -143,3 +143,5 @@ tags
 #== Customize ==
 **/not_upload/**
 /bin/**
+./**/*.dSYM
+*.out
