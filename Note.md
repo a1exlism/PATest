@@ -4,6 +4,7 @@
 按两本书进度来写, 便于查找
 
 ## Requirement
+
 >Chen Yue
 首先有十分钟拿下乙级15分题的本事。
 然后要能在半小时内完成乙级20分题1道。
@@ -21,7 +22,7 @@
 
 ### Chapter-3
 
-1. B1036 隐式类型转换
+#### B1036 隐式类型转换
 
 ```cpp
 int z, y, x = 3;
@@ -29,22 +30,21 @@ y = round(x/2);   //  1
 z = round(x/2.0); //  2
 ```
 
-2. Codeup1928 日期间隔
+#### Codeup1928 日期间隔
 
 日期计算方式思路很好: day by day
 
-3. B1022/-X 进制转换
+#### B1022/-X 进制转换
 
 做法都是先`%`后`/`
 
 * 十进制转D进制 do while格式
 * D进制转十进制 while格式
 
-4. 输出百分号: `%%`
+看了一下1009的错误才知道Runtime Error的问题, 数组开的太小导致越界
+[Runtime Error Refer](https://blog.csdn.net/user_longling/article/details/22488905)
 
-5. `strlen(str)/2`至少为str中值, arr下标以0为开始
-
-6. B1009 倒序输出
+#### B1009 倒序输出
 
 ```c++
 char * fgets ( char * str, int num, FILE * stream );
@@ -63,11 +63,30 @@ fgets(str, 101, stdin);
 str[strlen(str)-1] = '\0';
 ```
 
-其他教训:
+#### 其他教训
 
+* 输出百分号: `%%` 
+* `strlen(str)/2`至少为str中值, arr下标以0为开始 
 * 既定内存可以更大, 数组内存过少导致partitial accept
 * for循环会让结构更清晰
+
 
 [Refer](https://bbs.csdn.net/topics/310214704)
 
 ## 上机指南
+
+### Chapter\-3
+
+#### B1011 A+B>C
+
+主要问题在于题目中的范围: `[-2^31, 2^31]`
+超过了int, 所以需要用`long long`并用`lld`来scanf
+
+#### B1026 程序运行时间
+
+主要考察printf输出`格式`问题
+还有一个就是考试过程中`禁用round`函数,替代方案如下
+
+```c++
+z = (x + 0.5) / d;
+```
