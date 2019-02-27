@@ -4,7 +4,7 @@ int main() {
   const int N = 54;
   int shuffle_times = 0;
   int pos[54] = {1},
-      cards[54] = {1},
+      cards[54] = {1},  //  [0..53]: 1..54
       tmp[54] = {1};
   scanf("%d", &shuffle_times);
   for(int i = 0; i < N; i++) {
@@ -19,6 +19,7 @@ int main() {
       newPos = pos[i]-1;
       tmp[newPos] = cards[i];
     }
+    //  re-assignment
     for(int i = 0; i < 54; i++) {
       cards[i] = tmp[i];
     }
@@ -32,6 +33,8 @@ int main() {
     remainder = cards[i] % 13;
     if(remainder == 0) {
       remainder = 13;
+      //  ATTENTION: S13 % 13 需要-1
+      quotient --;
     }
     switch (quotient)
     {
