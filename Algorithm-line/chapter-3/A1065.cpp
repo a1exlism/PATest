@@ -1,18 +1,28 @@
 #include <cstdio>
 //  A+B C
 int main() {
-  long long a, b, c;
+  long long a, b, c, sum;
   int times = 0;
+  bool flag = false;
   scanf("%d", &times);
   for(int i = 0; i < times; i++) {
     scanf("%lld %lld %lld", &a, &b, &c);
-    if(a + b > c) {
-      printf("Case #%d: true", i+1);
+    sum = a + b;
+    if(a < 0 && b < 0 && sum >= 0) {
+      //  下溢
+      flag = false;
+    } else if(a > 0 && b > 0 && sum <= -2) {
+      //  上溢
+      flag = true;
+    } else if(sum > c) {
+      flag = true;
     } else {
-      printf("Case #%d: false", i+1);
+      flag = false;
     }
-    if(i < times-1) {
-      printf("\n");
+    if(flag) {
+      printf("Case #%d: true\n", i+1);
+    } else {
+      printf("Case #%d: false\n", i+1);
     }
   }
   return 0;
