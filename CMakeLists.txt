@@ -3,4 +3,4 @@ project(PATest)
 
 set(CMAKE_CXX_STANDARD 11)
 
-add_executable(CLion Before_Chapter3/sort_bubble.cpp)
+add_executable(CLion Algorithm-line/chapter-3/B1041.cpp)
