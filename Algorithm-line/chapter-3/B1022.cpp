@@ -1,21 +1,17 @@
-/**
- *  D进制的A+B 
- * 
- *  十进制转化为D进制
- */
 #include <cstdio>
 int main() {
-  int a, b, d, x, y[30] = {0};
-  scanf("%d%d%d", &a, &b, &d);
-  x = a + b;
-  int i = 0;
-  do {
-    y[i++] = x % d;
-    x = x / d;
-  } while(x != 0);
-
-  while(--i > -1) {
-    printf("%d", y[i]);
+  int a,b,m, d[32] = {0};
+  int sum, i = 0;
+  scanf("%d %d %d", &a, &b, &m);
+  sum = a + b;
+  if(!sum) i++;
+  //  ATTENTION: 判0处理
+  while(sum) {
+    d[i++] = sum % m;
+    sum /= m; 
   }
+  do {
+    printf("%d", d[--i]);
+  } while(i > 0);
   return 0;
 }
