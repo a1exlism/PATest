@@ -18,6 +18,13 @@
 此时你应该有70分左右了，
 最后半小时拚命过90吧！
 
+## 文件处理
+
+* in File_operator
+
+1. 注意在windows中用反斜杠, 加转义`\\`;
+2. scanf/printf `f`prefix
+
 ## 算法笔记
 
 ### Chapter 3
@@ -204,6 +211,26 @@ bool MoreEqu(person a, person b) {
 
 ### 字符串处理
 
+#### WARNING: 关于结束符`\0`
+
+1. gets/scanf在结尾会`自动`添加`\0`作为结尾, 相应的空间-1;
+2. puts/printf通过识别`\0`作为输出结尾.
+
+#### string.h
+
+>strlen(str)a;
+* `\0`为结尾
+
+>strcpy(str_to, str_from);
+* `\0`也会一同copy
+
+>strcat(str_main, str_sub);
+* concat
+
+#### StringIO | sscanf和sprintf的使用
+
+1. 格式化内容赋值
+
 #### B1006
 
 1. 只需要正确处理求商取余即可, 简单题
@@ -215,3 +242,24 @@ bool MoreEqu(person a, person b) {
 3. 小写转大写: X代表'X', 转换:`X-'A'+'a'`, 依据相对位置;
 
 #### B1031
+
+1. 审题不清导致完全走偏方向;
+2. 判负情况在循环状态下需要一个外部变量`Line 15`;
+
+#### B1002
+
+1. 较长的int连续输入处理`%s`;
+2. 十进制的数据按位分割`split`处理;
+3. 字典包处理, 二维数组.
+
+#### B1009
+
+1. WARNING, 这里需要强调一下scanf中的%s和%c的结束标志区别;
+
+具体如下: 
+* %s 以空格和换行作为读取`结束`标识符;
+* %c `可以读入`空格和换行, 这也是为什么某些题目需要getchar来消除空格和回车的原因; 
+
+2. 2nd判断需要添加对`'\n'`的检查
+
+####
