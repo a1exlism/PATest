@@ -213,8 +213,17 @@ bool MoreEqu(person a, person b) {
 
 #### WARNING: 关于结束符`\0`
 
-1. gets/scanf在结尾会`自动`添加`\0`作为结尾, 相应的空间-1;
-2. puts/printf通过识别`\0`作为输出结尾.
+0. `scanf("%s", str)`遇到空格也会停止接受数据;
+1. gets/scanf在结尾会`自动去掉`换行符`\n`并添加`\0`作为结尾, 相应的空间-1;
+2. fgets()读取单行数据, `保留`换行符`\n`, 并添加`\0`作为结尾, 相应空间-2(算上`\n`);
+如下为fgets => gets
+>str[strlen(str)-1] = '\0';
+
+3. puts/printf通过识别`\0`作为输出结尾.
+4. C++11 已经弃用gets, 转为`fgets`
+>fgets(str, strlen(str), stdin/filepointer);
+
+REFER-LINK: [C语言——输入输出函数](https://www.cnblogs.com/feipeng8848/p/7273939.html)
 
 #### string.h
 
@@ -262,4 +271,12 @@ bool MoreEqu(person a, person b) {
 
 2. 2nd判断需要添加对`'\n'`的检查
 
-####
+#### A1061/B1014
+
+1. 主要是语意问题, character/capital.etc
+2. 格式化输入: `%02d` prefix为0, 2位数
+
+#### B1048
+
+1. 主要难点在于输入是从前往后, 但是数据处理从后往前, 需要设计reverse函数以及合集str来进行两次reverse;
+2. index从0开始的奇偶颠倒;

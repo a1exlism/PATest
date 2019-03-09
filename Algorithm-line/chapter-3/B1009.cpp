@@ -13,7 +13,7 @@ int main()
   char str_arr[50][50];
   int j = 0, k = 0;
   // gets(str);
-  fgets(str, 500, stdin);
+  fgets(str, sizeof(str), stdin);
   str[strlen(str)-1] = '\0';
 
   for(int i = 0; str[i] != '\0'; i++) {
