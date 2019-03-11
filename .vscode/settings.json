@@ -5,6 +5,7 @@
       "string": "cpp",
       "string_view": "cpp",
       "ratio": "cpp",
-      "algorithm": "cpp"
+      "algorithm": "cpp",
+      "cstdio": "cpp"
     }
   }
