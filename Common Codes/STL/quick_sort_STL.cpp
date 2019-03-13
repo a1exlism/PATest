@@ -9,11 +9,13 @@ int main()
 {
   int arr[] = {73, 68, 80, 85, 73, 74, 33, 49, 74, 90, 23, 22, 1, 0, 57, 11, 27, 35, 60, 45};
   int len = sizeof(arr) / sizeof(arr[0]);
+
   sort(arr, arr+len);
   for(int i = 0; i < len; i++) {
     printf("%d ", arr[i]);
   }
   printf("\n");
+
   sort(arr, arr+len, compare);
   for(int i = 0; i < len; i++) {
     printf("%d ", arr[i]);

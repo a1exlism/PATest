@@ -244,6 +244,11 @@ REFER-LINK: [C语言——输入输出函数](https://www.cnblogs.com/feipeng884
 >strcat(str_main, str_sub);
 * concat
 
+>memset(str|intA, val, sizeof(str));
+* 数组初始化, int: `0/-1`
+
+ATTENTION: int类型的数组初始化只能为0, 其他数字写上去不报错但不`执行`
+
 #### StringIO | sscanf和sprintf的使用
 
 1. 格式化内容赋值
