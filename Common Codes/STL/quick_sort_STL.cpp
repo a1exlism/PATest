@@ -1,7 +1,7 @@
 #include <cstdio>
 #include <algorithm>
 using namespace std;
-
+//  结构体见2018_D
 //  sort(arrStart, arrEnd[, compare]);
 bool compare(int a, int b);
 

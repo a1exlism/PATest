@@ -78,6 +78,8 @@ fgets(str, 101, stdin);
 str[strlen(str)-1] = '\0';
 ```
 
+* 若要添加len, 则先len=strlen-1, 然后`str[len]='\0'`
+
 #### 其他教训
 
 * 输出百分号: `%%` 
@@ -223,7 +225,7 @@ bool MoreEqu(person a, person b) {
 
 0. `scanf("%s", str)`遇到空格也会停止接受数据;
 1. gets/scanf在结尾会`自动去掉`换行符`\n`并添加`\0`作为结尾, 相应的空间-1;
-2. fgets()读取单行数据, `保留`换行符`\n`, 并添加`\0`作为结尾, 相应空间-2(算上`\n`);
+2. fgets()读取单行数据, **遇到换行结束读取**, `保留`换行符`\n`, 并添加`\0`作为结尾, 相应空间-2(算上`\n`);
 如下为fgets => gets
 >str[strlen(str)-1] = '\0';
 
@@ -242,7 +244,7 @@ REFER-LINK: [C语言——输入输出函数](https://www.cnblogs.com/feipeng884
 * `\0`也会一同copy
 
 >strcat(str_main, str_sub);
-* concat
+* concat 字符串连接, main的结束符自动删除
 
 >memset(str|intA, val, sizeof(str));
 * 数组初始化, int: `0/-1`

@@ -1,4 +1,5 @@
 #include <cstdio>
+#include <string>
 #include <algorithm>
 using namespace std;
 
@@ -7,18 +8,10 @@ bool compare(int a, int b);
 
 int main()
 {
-  int arr[] = {73, 68, 80, 85, 73, 74, 33, 49, 74, 90, 23, 22, 1, 0, 57, 11, 27, 35, 60, 45};
-  int len = sizeof(arr) / sizeof(arr[0]);
-  sort(arr, arr+len);
-  for(int i = 0; i < len; i++) {
-    printf("%d ", arr[i]);
-  }
-  printf("\n");
-  sort(arr, arr+len, compare);
-  for(int i = 0; i < len; i++) {
-    printf("%d ", arr[i]);
-  }
- 
+  char str[100]="test_string";
+  char out_str[100];
+  std::string out_str = str.substr(0, 5);
+  printf("%s", out_str);
   return 0;
 }
 
