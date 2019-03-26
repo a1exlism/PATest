@@ -1,0 +1,49 @@
+## A
+6
+2 6 5 6 3 5
+output: 5
+---
+4
+3 4 6 7
+output:-1
+
+=====
+## B
+Hello
+1
+5
+HelloWorld
+HiHiHelloHiHi
+GrepIsAGreatTool
+HELLO
+HELLOisNITHello
+
+HelloWorld
+HiHiHelloHiHi
+HELLOisNITHello
+---
+Hello
+0
+5
+HelloWorld
+HiHiHelloHiHi
+GrepIsAGreatTool
+HELLO
+HELLOisNITHello
+--
+HelloWorld
+HiHiHelloHiHi
+HELLO
+HELLOisNITHello
+
+## C
+小明 8:00  12:00
+小红 8:00 11:00
+小明 2:00 6:00
+
+output: 小明 480
+	小红 180
+
+## D
+4
+2 5 4 2
