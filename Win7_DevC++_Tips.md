@@ -1,5 +1,10 @@
 # Windows7 Dev C++
 
+## ATTENTION
+
+check 2018_D.cpp
+STL sort用法
+
 ## 上机首要环境设置Env
 
 工具->编译选项, 加入命令:`-std=c++11`
