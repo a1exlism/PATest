@@ -23,6 +23,7 @@ int main() {
   for(int i = 0; i < len; i++) {
     printf("%s %d %d\n", grade[i].id, grade[i].num, grade[i].score);
   }
+  fclose(fp); //  WARNING: don't forget close the file
   return 0;
 }
 
