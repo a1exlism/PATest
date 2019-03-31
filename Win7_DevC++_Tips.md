@@ -1,9 +1,17 @@
 # Windows7 Dev C++
 
-## ATTENTION
+## BETTER
 
 check 2018_D.cpp
 STL sort用法
+
+## ATTENTION
+
+临时表示只能用`C`, 替代解决方案
+
+* include 要加h
+* 尝试使用`qsort`代替STL
+* 无`bool`类型
 
 ## 上机首要环境设置Env
 
