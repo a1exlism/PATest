@@ -19,20 +19,18 @@ int main()
   for(int i = 0; i < NUM; i++) {
     sprintf(stu[i].ID, "Std_NO.%03d", i+1);
     stu[i].grade = arr[i];
+    stu[i].rank = -1;
   }
   //  Ranking RULES: same grade for same rank
   sort(stu, stu+NUM, cmp);
   //  * init
-  int duplicate_num = 0;
+  int samenum = 0;
   stu[0].rank = 1;
   for(int i = 1; i < NUM; i++) {
-    if(stu[i].grade == stu[i-1].grade) {
-      stu[i].rank = stu[i-1].rank;
-      duplicate_num ++;
-    } else {
-      stu[i].rank = stu[i-1].rank + 1 + duplicate_num;  //  Next
-      duplicate_num = 0; // RE-init
-    }
+    if(stu[i].grade == stu[i-1].grade)
+      samenum ++;
+
+    stu[i].rank = 1+i-samenum;  //  rank from 1
   }
 
   for(int i = 0; i < NUM; i++) {

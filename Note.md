@@ -351,3 +351,9 @@ cmp细分为:
 2. 插入这个过程需要考虑到数据的暂存问题, 所以每次的更新循环从后往前走;
 3. update的节点`arr[i]`需要暂存, 而且不能放在比较环节, 会被直接取代;
 4. **比较的节点应该是前一个节点arr\[j-1\]**而不是被取代的那个;
+
+### A1025
+
+1. 总体来说, 两个排序, 方式一样.
+2. Ranking的算法方案, 同分同名次. [QuickLink-Gist](https://gist.github.com/a1exlism/f5e3affd5fd3f68125b09a7b897ca9b6)
+3. `13位左右`的数字, 似乎没办法进行大小比较, 至少在PAT的样例中无法通过(样例4), 跟网上[另一个](https://www.windsings.com/posts/c61b8460/)同学情况一样;但是[柳婼](https://www.liuchuo.net/archives/2180)的代码用了vector之后发现可以通过, 等看到STL-vector搞一下.
