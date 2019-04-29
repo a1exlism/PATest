@@ -1,0 +1,24 @@
+# REFER EditorConfig is awesome: https://github.com/editorconfig/editorconfig/wiki/EditorConfig-Properties
+
+# top-most EditorConfig file
+root = true
+
+# Unix-style newlines with a newline ending every file
+[*]
+end_of_line = lf
+insert_final_newline = true
+
+# Matches the exact files either package.json or .travis.yml
+[{package.json,.travis.yml}]
+indent_style = space
+indent_size = 2
+
+# == BETTER Customize options START ==
+[*.{c,cpp}]
+quote_type = double
+curly_bracket_next_line = false
+# 3. spaces_around_operators  WARNING: cautious in shell lang
+# 4. spaces_around_brackets	  REFER https://github.com/prettier/prettier/issues/1303 
+# 5. continuation_indent_size Set more in Python? Line break like `\`
+
+# == Customize options END ==

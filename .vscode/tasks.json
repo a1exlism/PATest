@@ -1,27 +1,30 @@
 {
-    "version": "2.0.0",
-    "tasks": [
-        {
-            "label": "build",
-            "command": "gcc",
-            "args": [
-                "-g", "-O0", "-W", "-Wall",
-                "./bin/test.cpp", 
-                "-o", 
-                "./bin/run.out"
-            ],
-            "problemMatcher": {
-                "owner": "cpp",
-                "fileLocation": ["relative", "${workspaceFolder}"],
-                "pattern": {
-                    "regexp": "^(.*):(\\d+):(\\d+):\\s+(warning|error):\\s+(.*)$",
-                    "file": 1,
-                    "line": 2,
-                    "column": 3,
-                    "severity": 4,
-                    "message": 5
-                }
-            }
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "build",
+      "command": "gcc",
+      "args": [
+        "-g",
+        "-O0",
+        "-W",
+        "-Wall",
+        "./test/main.cpp",
+        "-o",
+        "./test/run.out"
+      ],
+      "problemMatcher": {
+        "owner": "cpp",
+        "fileLocation": ["relative", "${workspaceFolder}"],
+        "pattern": {
+          "regexp": "^(.*):(\\d+):(\\d+):\\s+(warning|error):\\s+(.*)$",
+          "file": 1,
+          "line": 2,
+          "column": 3,
+          "severity": 4,
+          "message": 5
         }
-    ]
+      }
+    }
+  ]
 }
