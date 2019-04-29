@@ -22,7 +22,7 @@ int main() {
   }
   scanf("%d", &target);
   sort(arr, arr+n, cmp);
-  //  Binary Search Start
+  //  TIPS Binary Search Start
   int left, right, mid;
   left = 0;
   right = n - 1;

@@ -367,10 +367,36 @@ cmp 细分为:
 2. Ranking 的算法方案, 同分同名次. [QuickLink-Gist](https://gist.github.com/a1exlism/f5e3affd5fd3f68125b09a7b897ca9b6)
 3. `13位左右`的数字, 似乎没办法进行大小比较, 至少在 PAT 的样例中无法通过(样例 4), 跟网上[另一个](https://www.windsings.com/posts/c61b8460/)同学情况一样;但是[柳婼](https://www.liuchuo.net/archives/2180)的代码用了 vector 之后发现可以通过, 等看到 STL-vector 搞一下.
 
-### Hash && Recursion
+### 4.2/3 散列/分治
+
+- Hash && Recursion(划分小问题)
 
 用到案例: 全排列, N 皇后问题.
 
 1. HashTable 的建立, 数组设置按位 setup;
 2. 递归核心: 找到临界条件, 只看上下文; File: `recursion_full_permutation.cpp`
 3. N 皇后问题实质上也是排列组合问题, 在每次 generate 过程中需要判断是否规范.
+
+### 4.4 贪心
+
+局部最优解,最大收益问题.
+
+#### 简单贪心
+
+B1020,B1023, 记得`局部最优`即可
+
+#### 区间贪心
+
+区间不包含问题, example:
+
+> (1,3), (3,5) 包含 (2,4)
+
+with `interval_include.cpp`
+
+### 4.5 二分
+
+#### 二分查找
+
+Framework: `binary_search.cpp`
+
+BinarySearch 和递归挺像的, 不过用的循环. 熟悉即可.
