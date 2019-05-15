@@ -395,8 +395,32 @@ with `interval_include.cpp`
 
 ### 4.5 二分
 
-#### 二分查找
+#### 设计目的
 
-Framework: `binary_search.cpp`
+快速找到满足条件的点.
 
-BinarySearch 和递归挺像的, 不过用的循环. 熟悉即可.
+#### 条件
+
+存在 x=>y, x 和 y 成正/负相关.
+
+#### 注意点
+
+1. 返回的结果范围;
+2. CONDITION 条件的处理,即 left,right 更新的值;
+3. while 的判定条件,由`2`决定;
+4. 返回值,这个根据前面的 while 判定`3`决定.
+
+#### Source
+
+- Base template:
+  `Common\ Codes/Binary_search_exact.cpp` 找出直接满足`等价`条件的 pos
+
+- Enhanced template:  
+  `Common\ Codes/Bianry_search_1st_match.cpp` 找到`第一个`满足条件的 pos,可演化出最后一个满足条件的 pos
+
+  **先 right=mid,后 left=mid+1**
+
+- Extend Question:
+  1. `BS_approximate_value` 计算近似值 x;
+  2. `BS_water_load` 装水问题;
+  3. `BS_stick_cutting` **木棒切割问题**.

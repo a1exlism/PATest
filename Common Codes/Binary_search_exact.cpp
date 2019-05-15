@@ -1,23 +1,20 @@
 #include <cstdio>
-// 二分查找框架
+// 二分查找框架, 特定值
 int binary_search(int arr[], int len, int x) {
   int low = 0,
       high = len - 1;
   int mid;
   while(low <= high) {
-    mid = (low+high)/2;
+    mid = (low + high)/2;
     if(arr[mid] == x) {
-      break;
+      return mid;
     } else if(arr[mid] < x) {
       low = mid + 1;
     } else {
       high = mid - 1;
     }
   }
-  if(arr[mid] == x)
-    return mid;
-  else
-    return -1;
+  return -1;
 }
 
 int main() {
@@ -25,6 +22,6 @@ int main() {
   int len = sizeof(arr) / sizeof(arr[0]);
   int x;
   scanf("%d", &x);
-  printf("Position: %d", binary_search(arr, len, x));
+  printf("Position Index: %d", binary_search(arr, len, x));
   return 0;
 }
